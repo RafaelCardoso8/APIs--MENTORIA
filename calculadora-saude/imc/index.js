@@ -1,6 +1,6 @@
 function calcIMC(peso, altura){
     let imc 
-    imc = peso / (altura * altura)
+    imc = peso / ( altura * altura )
     return imc
 }
 
