@@ -1,13 +1,10 @@
 function add_item(lista,item){
-    if(lista.includes(item)){
-        return`Item ${item} já existe na lista`
-    }
-    else{
-        lista.push(item)
-        return `Item ${item} adicionado a lista!`
-        
-    }
-
+  if (!lista.includes(item)) {  // Verifica se o item já existe
+    lista.push(item);          // Adiciona o item à lista
+    return true;
+} else {
+    return false;
+}
 }
 
 function remove_item(lista,item){
@@ -23,11 +20,15 @@ function remove_item(lista,item){
 
 function exibir_lista(lista) {
   if (lista.length === 0) {
-    return "A lista está vazia."
-  } 
-  else {
-    return "Itens na lista:\n" + lista.join("\n")
-  }
+    return "A lista está vazia.";
+} else {
+    // Garante que apenas itens válidos sejam exibidos
+    return "Itens na lista:\n" + lista
+        .filter(item => typeof item === 'string' || (typeof item === 'object' && item.item)) // Filtra strings e objetos com 'item'
+        .map(item => typeof item === 'string' ? `- ${item}` : `- ${item.item}`)
+        .join("\n");
+}
+
 }
 
 module.exports = {add_item, remove_item, exibir_lista}
