@@ -1,5 +1,21 @@
 [
   "Banana",
   "Abacate",
-  "Goiaba"
+  "Goiaba",
+  {
+    "item": "Maçã",
+    "quantidade": 4
+  },
+  {
+    "item": "Banana",
+    "quantidade": 5
+  },
+  {
+    "item": "Abacate",
+    "quantidade": 2
+  },
+  {
+    "item": "Goiaba",
+    "quantidade": 5
+  }
 ]

@@ -1,15 +1,16 @@
-function add_item(lista,item){
-  if (!lista.includes(item)) {  // Verifica se o item já existe
-    lista.push(item);          // Adiciona o item à lista
-    return true;
-} else {
-    return false;
-}
+function add_item(lista,novoitem){
+    const itemExistente = lista.find(item => item.item === novoitem.item)
+    if (itemExistente) {
+        return false // Se já existe, retorna falso para evitar duplicação
+    } else {
+        lista.push(novoitem) // Adiciona o novo item com quantidade
+        return true
+    }
 }
 
 function remove_item(lista,item){
     let item_remov =lista.indexOf(item)
-    if (item_remov !== -1) {
+    if (item_remov !== -1) { 
     lista.splice(item_remov, 1)
     return `Item ${item} foi removido da lista`
     }
@@ -19,15 +20,15 @@ function remove_item(lista,item){
 }
 
 function exibir_lista(lista) {
-  if (lista.length === 0) {
-    return "A lista está vazia.";
-} else {
-    // Garante que apenas itens válidos sejam exibidos
-    return "Itens na lista:\n" + lista
-        .filter(item => typeof item === 'string' || (typeof item === 'object' && item.item)) // Filtra strings e objetos com 'item'
-        .map(item => typeof item === 'string' ? `- ${item}` : `- ${item.item}`)
-        .join("\n");
-}
+    if (lista.length === 0) {
+        return "A lista está vazia.";
+    } else {
+        // Filtra e exibe apenas itens válidos, com nome e quantidade
+        return "Itens na lista:\n" + lista
+            .filter(item => typeof item === 'object' && item.item && item.quantidade) // Filtra objetos com 'item' e 'quantidade'
+            .map(item => `- ${item.item} (Quantidade: ${item.quantidade})`) // Exibe nome e quantidade
+            .join("\n");
+    }
 
 }
 
