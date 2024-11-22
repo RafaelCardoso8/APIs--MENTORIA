@@ -13,5 +13,9 @@ class Pessoa{
 
 }
 
-module.exports =Pessoa
+
+
+//let Abel = new Pessoa("Abel Silva", 16, 1234567890)
+//Abel.exibirPessoa()
+module.exports = Pessoa
 

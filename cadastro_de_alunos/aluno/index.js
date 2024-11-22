@@ -1,4 +1,4 @@
-const Pessoa = require('../pessoas/Pessoa')
+const Pessoa = require('../pessoas/index.js')
 
 class Aluno extends Pessoa{
     constructor(nome,idade, cpf, nota1, nota2, nota3){
@@ -14,11 +14,11 @@ class Aluno extends Pessoa{
 
     exibirMedia(){
         let media = this.calcularMedia()
-        if(media > 17){
+        if(media > 6){
             console.log(`A media do aluno é ${media}. APROVADO!!`)
 
         }
-        else if(media > 15){
+        else if(media > 5){
             console.log(`A media do aluno é ${media}. RECUPERAÇÃO!!`)
 
         }
@@ -29,6 +29,14 @@ class Aluno extends Pessoa{
         console.log(`A media do aluno é ${media}`)
     }
 
+    exibirAluno(){
+        console.log(`Aluno: ${this._nome}, Idade: ${this._idade}, CPF: ${this._cpf}`)
+    }
+
 }
+
+//let Silva_Santos = new Aluno("Silva Santos", 16, 12332112300, 6.7, 5.6,8)
+//Silva_Santos.exibirAluno()
+//Silva_Santos.exibirMedia()
 
 module.exports = Aluno
