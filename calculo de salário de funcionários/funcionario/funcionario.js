@@ -11,9 +11,13 @@ class Funcionario{
 
         if( this._funcao === "funcionário"){
             sal_func = this._salario
-            console.log(`o salário do funcionário é de R$ ${sal_func}`)
+            console.log(`O salário do funcionário é de R$ ${sal_func}`)
         }
 
+    }
+
+    exibir_funcionário(){
+        console.log(`Funcionário:\nNome: ${this._nome}\nMatrícula: ${this._matricula}\nFunção: ${this._funcao}\n--------------`)
     }
 }
 
