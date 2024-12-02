@@ -15,7 +15,7 @@ class Supervisor extends Funcionario{
     calculo_salario(){
         let sal_func
 
-        if( this._funcao === "Gerente"){
+        if( this._funcao === "Supervisor"){
             sal_func = this._salario * 0.25
             console.log(`O salário do funcionário é de R$ ${sal_func}`)
         }
@@ -26,3 +26,5 @@ class Supervisor extends Funcionario{
     }
     
 }
+
+module.exports = Supervisor

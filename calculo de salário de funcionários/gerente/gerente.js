@@ -1,6 +1,6 @@
 const Funcionario = require("../funcionario/funcionario");
 
-class Supervisor extends Funcionario{
+class Gerente extends Funcionario{
     constructor(divisao){
         super(nome, matricula, salario, funcao)
         this._nome = nome
@@ -23,4 +23,4 @@ class Supervisor extends Funcionario{
     
 }
 
-module.exports = Supervisor
+module.exports = Gerente
