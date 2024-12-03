@@ -1,7 +1,7 @@
 const Funcionario = require("../funcionario/funcionario");
 
 class Tecnico extends Funcionario{
-    constructor(supervisor , area){
+    constructor(nome, matricula, salario, funcao, supervisor , area){
         super(nome, matricula, salario, funcao)
         this._nome = nome
         this._matricula = matricula
@@ -15,7 +15,7 @@ class Tecnico extends Funcionario{
         let sal_func
 
         if( this._funcao === "Técnico"){
-            sal_func = this._salario * 0.1
+            sal_func = (this._salario * 0.1) + this._salario
             console.log(`O salário do funcionário é de R$ ${sal_func}`)
         }
     }
