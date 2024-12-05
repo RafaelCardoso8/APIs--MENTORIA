@@ -1,3 +1,6 @@
 {
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "chalk": "^5.3.0"
+  }
 }

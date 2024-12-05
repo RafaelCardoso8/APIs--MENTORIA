@@ -1,4 +1,4 @@
-const Funcionario = require("../funcionario/funcionario");
+const Funcionario = require("../funcionario/funcionario")
 
 class Supervisor extends Funcionario{
     constructor(nome, matricula, salario, funcao,gerente, area){
