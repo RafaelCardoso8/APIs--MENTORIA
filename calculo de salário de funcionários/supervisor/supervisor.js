@@ -19,6 +19,8 @@ class Supervisor extends Funcionario{
             sal_func = (this._salario * 0.15) + this._salario
             console.log(`O salário do funcionário é de R$ ${sal_func}`)
         }
+
+        return sal_func
     }
 
     exibir_funcionário(){

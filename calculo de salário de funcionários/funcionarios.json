@@ -1,0 +1,16 @@
+[
+  {
+    "_nome": "Rafael Cardoso",
+    "_matricula": "8888",
+    "_salario": "8500",
+    "_funcao": "Gerente",
+    "_divisao": "Telecomunicações"
+  },
+  {
+    "_nome": "Joyce Ribeiro",
+    "_matricula": "86",
+    "_funcao": "Gerente",
+    "_divisao": "Marketing",
+    "_salario": 3800
+  }
+]

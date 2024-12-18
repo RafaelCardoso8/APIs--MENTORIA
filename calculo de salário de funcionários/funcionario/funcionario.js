@@ -14,6 +14,8 @@ class Funcionario{
             console.log(`O salário do funcionário é de R$ ${sal_func}`)
         }
 
+        return this._salario
+
     }
 
     exibir_funcionário(){

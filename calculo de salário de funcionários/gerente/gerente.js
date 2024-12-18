@@ -18,9 +18,11 @@ class Gerente extends Funcionario{
             sal_func = (this._salario * 0.25) + this._salario
             console.log(`O salário do funcionário é de R$ ${sal_func}`)
         }
+
+        return sal_func
     }
 
-    
+  
 }
 
 module.exports = Gerente
